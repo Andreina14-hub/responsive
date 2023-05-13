@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Righteous";
+}
+
+.verde {
+  grid-area: head;
+  margin: auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #0c9b3b;
+}
+
+/* Contenedor general*/
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "main main"
+    "main main";
+  gap: 2rem;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 1px 50fr;
+  width: 90%;
+  margin: auto;
+}
+
+/*Estilos parte principal*/
+main {
+  background-color: #a3d2a5;
+  color: #302e2e;
+  grid-area: main;
+  margin: auto 1rem;
+}
+
+main section {
+  width: 80vw;
+}
+
+section.main_text {
+  color: white;
+  font-weight: bolder;
+  padding: 0.5rem;
+}
+
+section.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.images img {
+  height: 100px;
+  width: 25%;
+}
+
+.hidden {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .novedades {
+    display: flex;
+  }
+  main {
+    background-color: #666666;
+    color: #c8e1ca;
+  }
+
+  .novedades > * {
+    width: 25%;
+  }
+
+  section.main_text,
+  section.images {
+    width: 50%;
+  }
+  section.images img {
+    width: 50%;
+    height: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hidden {
+    display: block;
+  }
+  section.images {
+    order: 1;
+  }
+  section.main_text {
+    order: 2;
+  }
+  section.images img {
+    height: 33%;
+    width: 33%;
+  }
+}
