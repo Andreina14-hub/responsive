@@ -19,6 +19,10 @@ body {
   margin: auto 1rem;
   display: flex;
   justify-content: space-between;
+}
+.verde h1,
+h2,
+article > h3 {
   color: #0c9b3b;
 }
 
@@ -73,6 +77,22 @@ section.images img {
 }
 
 @media screen and (min-width: 576px) {
+  h1,
+  h2,
+  article > h3 {
+    color: #0c9b3b;
+  }
+  main {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  main .box {
+    padding-bottom: 6rem;
+    width: 50%;
+  }
+
   .novedades {
     display: flex;
   }
